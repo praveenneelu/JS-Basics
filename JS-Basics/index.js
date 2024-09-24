@@ -1,4 +1,4 @@
-// EX - 2 Swapping Variables
+// EX - 1 Swapping Variables
 
 let x = 'red';
 let y = 'blue';
