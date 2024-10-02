@@ -1,11 +1,8 @@
-// EX - 1 Swapping Variables
+// Write a function that takes two numbers and returns maximum of two.
 
-let x = 'red';
-let y = 'blue';
+let number = maxi(4,3);
+console.log(number);
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
-
-console.log(x); // blue
-console.log(y); // red 
+function maxi(number1, number2) {
+return (number1 > number2) ? number1 : number2;
+}
