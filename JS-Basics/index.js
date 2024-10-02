@@ -1,11 +1,8 @@
-// EX - 1 Swapping Variables
+// Write a function that takes two numbers and returns Landscape or not.
 
-let x = 'red';
-let y = 'blue';
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+console.log(isLandscape(900,700));
 
-console.log(x); // blue
-console.log(y); // red 
+function isLandscape(width, height) {
+return (width > height);
+}
