@@ -1,11 +1,31 @@
-// EX - 1 Swapping Variables
+// Write a function for fizzbuzz algorithm.
+// Divisible by 3 => Fizz
+// Divisible by 3 => Buzz
+// Divisible by both 3 & 5 => FizzBuzz
+// Not Divisible by 3 or 5 => input
+// Not a number => 'Not a number'
 
-let x = 'red';
-let y = 'blue';
+const output = fizzbuzz(25);
+console.log(output);
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+function fizzbuzz(input) {
+    
+    if(typeof(input) !== 'number') {
+        return NaN;
+    }
 
-console.log(x); // blue
-console.log(y); // red 
+    if( (input % 3 ===0) && (input % 5 === 0) ) {
+        return 'FizzBuzz';
+    }
+
+    if( input % 3 === 0 ) {
+        return 'Fizz';
+    }
+
+    if( input %5 === 0 ) {
+        return 'Buzz';
+    } 
+    
+    
+        return input;
+}
