@@ -1,11 +1,13 @@
-// EX - 1 Swapping Variables
+// EX - 6 - Count Truthy
+const array = [0, null, undefined, '',1,2,3,4,5];
+console.log(countTruthy(array));
 
-let x = 'red';
-let y = 'blue';
-
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
-
-console.log(x); // blue
-console.log(y); // red 
+function countTruthy(array) {
+    let count = 0;
+    for(let value of array) {
+        if(value){
+            count++;
+        }
+    }
+return count;
+}
