@@ -1,5 +1,5 @@
 // EX-4 - Even and Odd Numbers.
-showNumbers(10);
+showNumbers(12);
 
 function showNumbers(limit) {
     
