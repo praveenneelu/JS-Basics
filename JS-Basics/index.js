@@ -1,11 +1,10 @@
-// EX - 1 Swapping Variables
+// EX-4 - Even and Odd Numbers.
+showNumbers(10);
 
-let x = 'red';
-let y = 'blue';
-
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
-
-console.log(x); // blue
-console.log(y); // red 
+function showNumbers(limit) {
+    
+    for(let i = 0; i<=limit; i++) {
+        const message = (i % 2 == 0) ? 'EVEN' : 'ODD';
+        console.log(i, message)
+    }
+}
