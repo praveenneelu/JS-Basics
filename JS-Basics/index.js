@@ -1,5 +1,5 @@
 // EX - 6 - Count Truthy
-const array = [0, null, undefined, '',1,2,3,4,5];
+const array = [0, null, undefined, '',1,2,5];
 console.log(countTruthy(array));
 
 function countTruthy(array) {
