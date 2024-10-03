@@ -1,11 +1,13 @@
-// EX - 1 Swapping Variables
+// EX-8 sum of muliples of 3 and 5
+console.log(sum(15));
 
-let x = 'red';
-let y = 'blue';
+function sum(limit) {
+    let sum = 0;
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
-
-console.log(x); // blue
-console.log(y); // red 
+    for(let i = 0; i <= limit; i++) {
+        if(i % 3 == 0 || i % 5 == 0) {
+            sum += i;
+        }
+    }
+  return sum;
+}
