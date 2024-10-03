@@ -1,11 +1,18 @@
-// EX - 1 Swapping Variables
+// EX - 7 String Properties.
 
-let x = 'red';
-let y = 'blue';
+const movie = {
+    title: 'a',
+    releaseYear: 2018,
+    rating: 4.5,
+    director: 'b'
+};
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+showProperties(movie);
 
-console.log(x); // blue
-console.log(y); // red 
+function showProperties(obj) {
+    for(let key in obj) {
+        if( typeof obj[key] === 'string') {
+            console.log(key, obj[key]);
+        }
+    }
+}
