@@ -1,11 +1,20 @@
-// EX - 1 Swapping Variables
+// EX - 4 Moving an element.
 
-let x = 'red';
-let y = 'blue';
+const numbers = [1, 2, 3, 4];
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+const output = move(numbers, 0,3);
+console.log(output);
 
-console.log(x); // blue
-console.log(y); // red 
+function move(array, index, offset) {
+    const position = index + offset;
+    if(position >= array.length || position < 0) {
+    
+        console.error("Invalid offset");
+    }
+    else {
+    const output = [...array];
+    const element = output.splice(index, 1)[0];
+    output.splice(position , 0, element);
+    return output;
+    }   
+}
