@@ -1,11 +1,14 @@
-// EX - 1 Swapping Variables
+// EX - 5 Constructor Functions.
 
-let x = 'red';
-let y = 'blue';
+let post = new Post('a', 'b', 'c');
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+console.log(post);
 
-console.log(x); // blue
-console.log(y); // red 
+function Post(title, body, author) {
+    this.title = title;
+    this.body = body;
+    this.author = author;
+    this.views = 0;
+    this.comments = [];
+    this.isLive = false;
+}
