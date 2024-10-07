@@ -1,11 +1,19 @@
-// EX - 1 Swapping Variables
+// EX - 3 Object Equality.
+let address1 = new Address('a', 'b', 'c');
+let address2 = new Address('a', 'b', 'c');
+console.log(areEqual(address1, address2));
+console.log(areSame(address1, address2));
 
-let x = 'red';
-let y = 'blue';
+function Address(street, city, zipcode) {
+    this.street = street;
+    this.city = city;
+    this.zipcode = zipcode;
+}
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+function areEqual(address1, address2) {
+    return address1.street === address2.street && address1.city === address2.city && address1.zipcode === address2.zipcode;
+}
 
-console.log(x); // blue
-console.log(y); // red 
+function areSame(address1, address2) {
+    return address1 === address2;
+}
