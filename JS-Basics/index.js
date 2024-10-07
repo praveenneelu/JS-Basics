@@ -1,11 +1,15 @@
-// EX - 1 Swapping Variables
+// EX - 4 Blog Post Object.
 
-let x = 'red';
-let y = 'blue';
+let post = {
+    title: 'a',
+    body: 'b',
+    author: 'c',
+    views: 10,
+    comments: [
+        { author: 'a', body: 'b' },
+        { author: 'c', body: 'd' },
+    ],
+    isLive: true
+};
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
-
-console.log(x); // blue
-console.log(y); // red 
+console.log(post);
