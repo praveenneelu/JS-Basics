@@ -1,11 +1,14 @@
-// EX - 1 Swapping Variables
+// EX - 1 Array from Range.
 
-let x = 'red';
-let y = 'blue';
+let values = arrayFromRange(1, 9);
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+console.log(values);
 
-console.log(x); // blue
-console.log(y); // red 
+function arrayFromRange(min, max) {
+    const output = [];
+    for (let i  = min; i <= max; i++) {
+        output.push(i);
+    }
+    return output;
+
+}
