@@ -1,11 +1,24 @@
-// EX - 1 Swapping Variables
+// EX - 2 Factory and Constructor Function.
 
-let x = 'red';
-let y = 'blue';
+let address = ['a', 'b', 'c'];
+console.log(address);
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+let addresses = new Address('a', 'b', 'c');
+console.log(addresses);
 
-console.log(x); // blue
-console.log(y); // red 
+ // Factory Function.
+ function createAddress(street, city, zipcode) {
+    return {
+        street,
+        city,
+        zipcode
+    };
+ }
+
+ // Constructor Function.
+
+ function Address(street, city, zipcode) {
+    this.street = street;
+    this.city = city;
+    this.zipcode = zipcode;
+ }
