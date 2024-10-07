@@ -1,11 +1,14 @@
-// EX - 1 Swapping Variables
+// EX - 3 Except.
 
-let x = 'red';
-let y = 'blue';
+const numbers = [1,2,3,4,5,6,7];
+console.log(except(numbers, [1,2]));
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
-
-console.log(x); // blue
-console.log(y); // red 
+function except(array, excluded) {
+    const output = [];
+    for(let element of array) {
+        if( !excluded.includes(element) ) {
+            output.push(element);
+        }
+    }
+    return output;
+}
