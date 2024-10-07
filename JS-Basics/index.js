@@ -1,11 +1,16 @@
-// EX - 1 Swapping Variables
+// EX - 5 count occurences.
 
-let x = 'red';
-let y = 'blue';
+const numbers = [1,2,3,4,5,1];
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+const count = countOccurences(numbers, -1);
 
-console.log(x); // blue
-console.log(y); // red 
+console.log(count);
+
+function countOccurences(array, searchElement) {
+
+return array.reduce((accumulator, current) => {
+    const occurence = (current === searchElement) ? 1 : 0;
+    console.log(accumulator , current, searchElement);
+    return accumulator + occurence;
+}, 0);
+}
