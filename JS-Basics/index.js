@@ -14,5 +14,4 @@ const titles = movies
     .reverse()
     .map(m => m.title);
 
-    console.log(titles);
-    
+console.log(titles);
