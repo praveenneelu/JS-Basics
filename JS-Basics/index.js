@@ -1,11 +1,15 @@
-// EX - 1 Swapping Variables
+// EX - 1 Address Objects.
 
-let x = 'red';
-let y = 'blue';
+let address = {
+    street: 'a',
+    city: 'b',
+    zipcode: 'c'
+}; 
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+function showAddress(address) {
+    for (let key in address) {
+        console.log(key, address[key]);
+    }
+}
 
-console.log(x); // blue
-console.log(y); // red 
+showAddress(address);
