@@ -1,11 +1,14 @@
-// EX - 1 Swapping Variables
-
-let x = 'red';
-let y = 'blue';
-
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
-
-console.log(x); // blue
-console.log(y); // red 
+// EX - 10 Finding Prime numbers.
+showPrimes(20);
+function showPrimes(limit) {
+    for(let number = 2; number <= limit; number++) {
+        let isPrime = true;
+        for(let factor = 2; factor < number; factor++) {
+            if(number % factor === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if(isPrime) console.log(number);
+    }
+}
