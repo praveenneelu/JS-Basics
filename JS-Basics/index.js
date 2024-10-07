@@ -1,11 +1,14 @@
-// EX - 1 Swapping Variables
+// EX - 6 Get Max.
 
-let x = 'red';
-let y = 'blue';
+const numbers = [1,2,8,4,5];
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+const max = getMax(numbers);
 
-console.log(x); // blue
-console.log(y); // red 
+console.log(max);
+
+function getMax(array) {
+    if (array.length === 0) {
+        return undefined;
+    }
+    return array.reduce((a,b) => (a > b) ? a : b);
+}
