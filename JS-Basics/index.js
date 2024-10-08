@@ -1,11 +1,21 @@
-// EX - 1 Swapping Variables
+// EX - 3 error handling.
+try {
+    const numbers = [1,2,3,4,5,1];
+    const count = countOccurences(null, 1);
+    console.log(count);    
+} catch (e) {
+    console.log(e.message);   
+}
 
-let x = 'red';
-let y = 'blue';
+function countOccurences(array, searchElement) {
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+if(!Array.isArray(array)) {
+    throw new Error('Invalid array.');
+}
 
-console.log(x); // blue
-console.log(y); // red 
+    return array.reduce((accumulator, current) => {
+        const occurence = (current === searchElement) ? 1 : 0;
+        console.log(accumulator , current, searchElement);
+        return accumulator + occurence;
+    }, 0);
+}
