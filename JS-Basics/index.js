@@ -1,11 +1,10 @@
-// EX - 1 Swapping Variables
+// EX - 2 Area of circles.
 
-let x = 'red';
-let y = 'blue';
+const circle = {
+    radius: 1,
+    get area() {
+        return Math.PI * this.radius * this.radius;
+    }
+};
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
-
-console.log(x); // blue
-console.log(y); // red 
+console.log(circle.area);
