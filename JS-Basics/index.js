@@ -1,11 +1,17 @@
-// EX - 1 Swapping Variables
+// EX - 7 Movie ratings.
 
-let x = 'red';
-let y = 'blue';
+const movies = [
+    {title: 'a', year: 2018, rating: 4.5},
+    {title: 'b', year: 2019, rating: 4},
+    {title: 'c', year: 2017, rating: 3.5},
+    {title: 'd', year: 2018, rating: 4},
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+];
 
-console.log(x); // blue
-console.log(y); // red 
+const titles = movies
+    .filter(m => m.year === 2018 && m.rating >= 4) 
+    .sort((a,b) => a.rating - b.rating)
+    .reverse()
+    .map(m => m.title);
+
+console.log(titles);
