@@ -1,11 +1,11 @@
-// EX - 1 Swapping Variables
+// EX - 1 sum of arguments.
 
-let x = 'red';
-let y = 'blue';
+console.log(sum([1, 2, 3, 4]));
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
+function sum(...items) {
+    if(items.length === 1 && Array.isArray(items[0])) {
+        items = [...items[0]];
+    }
 
-console.log(x); // blue
-console.log(y); // red 
+    return items.reduce(( a, b ) => a + b);
+}
