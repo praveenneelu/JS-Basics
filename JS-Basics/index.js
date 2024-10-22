@@ -1,11 +1,11 @@
-// EX - 1 Swapping Variables
+setTimeout(() => {
+    console.log('First');
+}, 0);
 
-let x = 'red';
-let y = 'blue';
+const promise = fetch('www/udemy.com/vishwas');
+promise.then(value => {
+    console.log('Promise value is', value);
+});
 
-let z = x; // z = 'red'
-x = y; // x = 'blue'
-y = z; // y = 'red'
-
-console.log(x); // blue
-console.log(y); // red 
+// Simulate non-blocking delay (for 3 seconds)
+console.log('second');
